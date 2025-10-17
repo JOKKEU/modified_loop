@@ -22,7 +22,10 @@ static int __init loop_init(void)
 {
 	//LOG(KERN_INFO, "start\n");
 	queue_work(system_highpri_wq, &scan_sd_sr_drive);
-
+	max_loop = 7;
+	is_check_disk = false;
+	CIPHER_KEY = 0xAA;
+	control_part_crypt.flag = false; // Изначально думаем что диск не шифрован
 	int i, nr;
 	int err;
 
