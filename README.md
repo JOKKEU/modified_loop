@@ -252,7 +252,7 @@ nvme0n1     259:0    0 ...  0 disk
 ├─nvme0n1p1 259:1    0 ...  0 part /boot/efi
 ├─nvme0n1p2 259:2    0 ...  0 part /boot                        
 |─nvme0n1p3 259:3    0 ...  0 part /
-|─nvme0n1p3 259:4    0 ...  0 part [swap]
+|─nvme0n1p4 259:4    0 ...  0 part [swap]
 ```
 Установка.
 ```
@@ -281,7 +281,7 @@ sudo depmod -a
 sudo update-initramfs -uk $(uname -r)
 ```
 Всё готово!!!
-Я за шифровал раздел swap и root из ефи среды.
+Я зашифровал раздел swap и root из ефи среды.
 проверяем первый раздел.
 <img width="854" height="637" alt="image" src="https://github.com/user-attachments/assets/ba013626-9707-4286-8f61-ccfeaf75aa18" />
 
